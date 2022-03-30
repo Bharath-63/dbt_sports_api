@@ -1,5 +1,5 @@
-      create or replace  table "DB".PUBLIC."LISTS"  as
-      (select * from(
+create or update  table "DB".PUBLIC."LISTS"  as
+(select * from(
 
 with __dbt__cte__LISTS_AB1 as (
 
