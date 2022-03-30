@@ -1,4 +1,4 @@
-create or update  table "DB".PUBLIC."LISTS_FOOTBALL"  as
+create or update  table "DB"."PUBLIC"."LISTS_FOOTBALL"  as
 (select * from(
 
 with __dbt__cte__LISTS_FOOTBALL_AB1 as (
@@ -17,7 +17,7 @@ select
     _AIRBYTE_AB_ID,
     _AIRBYTE_EMITTED_AT,
     convert_timezone('UTC', current_timestamp()) as _AIRBYTE_NORMALIZED_AT
-from "DB".PUBLIC."LISTS" as table_alias
+from "DB".PUBLIC._AIRBYTE_RAW_LISTS as table_alias
 -- FOOTBALL at lists/football
 cross join table(flatten(FOOTBALL)) as FOOTBALL
 where 1 = 1
