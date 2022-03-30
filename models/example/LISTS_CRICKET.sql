@@ -1,4 +1,4 @@
-create or update  table "DB"."PUBLIC"."LISTS_CRICKET"  as
+create table "DB"."PUBLIC"."LISTS_CRICKET"  as
 (select * from(
 
 with __dbt__cte__LISTS_CRICKET_AB1 as (
