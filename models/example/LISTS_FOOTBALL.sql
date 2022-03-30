@@ -1,5 +1,5 @@
-      create or replace  table "DB".PUBLIC."LISTS_FOOTBALL"  as
-      (select * from(
+create or update  table "DB".PUBLIC."LISTS_FOOTBALL"  as
+(select * from(
 
 with __dbt__cte__LISTS_FOOTBALL_AB1 as (
 
