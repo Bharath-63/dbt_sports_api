@@ -1,4 +1,4 @@
-create table "DUPLICATE_DB"."PUBLIC"."LISTS_CRICKET"  as
+create table "DB"."PUBLIC"."LISTS_CRICKET"  as
 (select * from(
 
 with __dbt__cte__LISTS_CRICKET_AB1 as (
@@ -14,6 +14,9 @@ select
     to_varchar(get_path(parse_json(CRICKET.value), '"country"')) as COUNTRY,
     to_varchar(get_path(parse_json(CRICKET.value), '"stadium"')) as STADIUM,
     to_varchar(get_path(parse_json(CRICKET.value), '"tournament"')) as TOURNAMENT,
+    _AIRBYTE_AB_ID,
+    _AIRBYTE_EMITTED_AT,
+    convert_timezone('UTC', current_timestamp()) as _AIRBYTE_NORMALIZED_AT
 from "DB".PUBLIC._AIRBYTE_RAW_LISTS as table_alias
 -- CRICKET at lists/cricket
 cross join table(flatten(CRICKET)) as CRICKET
