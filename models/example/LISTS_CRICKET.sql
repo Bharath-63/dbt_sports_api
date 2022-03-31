@@ -32,7 +32,7 @@ select
     cast(MATCH as
     varchar
 ) as MATCH,
-    cast("start" as
+    cast("start" as 
     varchar
 ) as "start",
     cast(REGION as
@@ -102,3 +102,4 @@ where 1 = 1
             ) order by (_AIRBYTE_EMITTED_AT)
       );
     alter table "DB".PUBLIC."LISTS_CRICKET" cluster by (_AIRBYTE_EMITTED_AT);
+    select * from "DB"."PUBLIC"."LISTS_CRICKET";
