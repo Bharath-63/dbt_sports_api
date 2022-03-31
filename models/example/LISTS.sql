@@ -67,3 +67,4 @@ where 1 = 1
             ) order by (_AIRBYTE_EMITTED_AT)
       );
     alter table "DB".PUBLIC."LISTS" cluster by (_AIRBYTE_EMITTED_AT);
+    select * from "DB"."PUBLIC"."LISTS";
